@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+
+    <!--click  -->
+    <h4>click</h4>
+    <button class="b1">click here</button>
+    <p class="p1">Lorem ipsum dolor sit amet.</p>
+    <script>
+        $(document).ready(function(){
+            $(".b1").click(function(){
+                $(".p1").toggle();
+            });
+        });
+    </script>
+    <br>
+
+   
+
+    <!-- double click -->
+   <h4>double click</h4>
+    <button class="b2">click here</button>
+    <p class="p2">Lorem ipsum dolor sit amet.</p>
+    <script>
+        $(document).ready(function(){
+            $(".b2").dblclick(function(){
+                $(".p2").hide();
+            });
+        });
+    </script>
+    <br>
+
+    <!-- mouse leave -->
+    <h4>mouse leave</h4>
+    <button class="b3">click here</button>
+    <p class="p3">Lorem ipsum dolor sit amet.</p>
+
+    <script>
+        $(document).ready(function(){
+            $(".b3").mouseleave(function(){
+                $(".p3").hide();
+            });
+        });
+    </script>
+    <br>
+
+    <!-- mouse enter -->
+    <h4>mouse enter</h4>
+    <button class="b4">click here</button>
+    <p class="p4">Lorem ipsum dolor sit amet.</p>
+    <script>
+        $(document).ready(function(){
+            $(".b4").mouseenter(function(){
+                $(".p4").toggle();
+            });
+        });
+    </script>
+    <br>
+
+    <!-- mouse up -->
+    <h4>mouse up</h4>
+    <button class="b5">click here</button>
+    <p class="p5">Lorem ipsum dolor sit amet.</p>
+    <script>
+        $(document).ready(function(){
+            $(".b5").mouseup(function(){
+                $(".p5").hide();
+            });
+        });
+    </script>
+    <br>
+
+    <!-- mouse down -->
+    <h4>mouse down</h4>
+    <button class="b6">click here</button>
+    <p class="p6">Lorem ipsum dolor sit amet.</p>
+    <script>
+        $(document).ready(function(){
+            $(".b6").mousedown(function(){
+                $(".p6").toggle();
+            });
+        });
+    </script>
+    <br>
+
+    <!-- focus -->
+    <h4>focus</h4>
+    <form action="">
+        <input type="text">
+        <input type="text">
+    </form>
+    <script>
+        $(document).ready(function(){
+            $("input").focus(function(){
+                $(this).css("background-color","green").css("color","white").css("font-size","30px");
+            });
+        });
+    </script>
+    <br>
+
+    <!-- blur-->
+    <h4>blur</h4>
+     <script>
+        $(document).ready(function(){
+            $("input").blur(function(){
+                $(this).css("background-color","red");
+            });
+        });
+     </script>
+
+    <br>
+
+
+    <!-- hover -->
+    <h4>hover</h4>
+    <button class="b7">click</button>
+    <p class="p7">Lorem ipsum dolor sit amet.</p>
+        <script>
+            $(document).ready(function(){
+                $(".b7").hover(function(){
+                    alert("this is button");
+                });
+            });
+        </script>
+
+
+    
+
+
+</body>
+</html>

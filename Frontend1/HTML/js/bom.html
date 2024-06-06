@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bom</title>
+</head>
+<body>
+    <!-- two object model -->
+    <!-- 1.browser object model(bom), 2.document object model(dom) -->
+    <!-- browser object model: 1.window object   2.history object  3.navigator object  4.screen object -->
+    <!-- window object: 1.alert() 2.confirm() 3.prompt() 4.open()-->
+     
+
+    <!-- window object model -->
+      <!-- alert -->
+    <button onclick="alerts()">alert</button>
+    <!-- confirm -->
+    <button onclick="confirms()">confirm</button>
+    <!-- prompt -->
+    <button onclick="prompts()">prompt</button>
+    <!-- open -->
+    <button onclick="opens()">open</button>
+
+    <script>
+        function alerts(){
+            alert("it is an alert box");
+        }
+        function confirms(){
+            let a=confirm("do you want to delete?");
+            if (a==true){
+                alert("delete successfully");
+            }
+            else{
+                alert("delete cancel");
+            }
+        }
+        function prompts(){
+            let b=prompt("what is your name?");
+            alert("welcome" +b);
+            
+        }
+        function opens(){
+            open("https://www.google.com");
+        }
+
+        document.write("<br>")
+
+        
+    </script>
+
+
+     <!-- history object -->
+     <!-- back , forward, go -->
+
+       <button onclick="backs()">back</button>
+       <button onclick="forwards()">forward</button>
+       <button onclick="gos()">go</button>
+
+       <script>
+        function backs(){
+            window.history.back();
+        }
+        function forwards(){
+            window.history.forward();
+        }
+        function gos(){
+            window.history.go(1);
+        }
+        document.write("<br>")
+       </script>
+
+       <script>
+        // navigator object
+
+        // 1.app code name 2.app name 3.app version  4.language 5.user agent 6.platform
+
+        document.write("app code name:" +navigator.appCodeName +"<br>");
+        document.write("app name:" +navigator.appName +"<br>");
+        document.write("app version:" +navigator.appVersion +"<br>");
+        document.write("language:" +navigator.language +"<br>");
+        document.write("user agent:" +navigator.userAgent +"<br>");
+        document.write("platform:" +navigator.platform +"<br>");
+
+       </script> 
+       
+       <script>
+        // screen object
+
+        document.write("screen width:" +screen.width +"<br>");
+        document.write("screen height:" +screen.height +"<br>");
+        document.write("screen available width:" +screen.availWidth +"<br>");
+        document.write("screen available height:" +screen.availHeight +"<br>");
+        document.write("screen color depth:" +screen.colorDepth +"<br>");
+        document.write("pixel depth:" +screen.pixelDepth +"<br>");
+        
+       </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+    
+
+    <div class="container">
+        <form onsubmit="return apple()" class="mt-5 border p-4 rounded shadow mx-auto mt-5 " name="myform">
+         <h2 class="text-center pb-4">Login Form</h2>
+         <div class="form-group">
+            <label for="">User Name</label>
+            <input type="text" placeholder="enter the user name" class="form-control" name="user">
+         </div>
+         <div class="form-group">
+             <label for="">password</label>
+             <input type="password" placeholder="enter the password" class="form-control" name="pass">
+         </div>
+         <div class="form-group">
+            <label for="">confirm password</label>
+            <input type="password" placeholder="enter the confirm password" class="form-control" name="cpass">
+        </div>
+         <button type="submit" class="btn btn-warning">submit</button>
+        </form>
+     </div>
+
+
+     <script>
+        function apple(){
+            let a=document.myform.user.value;
+            let b=document.myform.pass.value;
+            let c=document.myform.cpass.value;
+            if (a==""){
+                alert("name cannot be empty");
+                return false;
+            }
+            else if (b==""){
+                alert("password cannot be empty");
+                return false;
+            }
+            else if (b.length<=7){
+                alert("password must be 8 characters");
+                return false;
+            }
+            else if (b!==c){
+                alert("both password must be same");
+                return false
+            }
+            else {
+                open("https://www.flipkart.com");
+                return true;
+            }
+
+             
+        }
+     </script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>

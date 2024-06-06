@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+</head>
+<style>
+    ul{
+        list-style-type: none;
+        background-color: black;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    li{
+        float: right;
+    }
+    li a{
+        text-decoration: none;
+        color: white;
+        padding: 15px;
+        display: inline-block;
+    }
+    li a:hover{
+        background-color: brown;
+    }
+    div{
+        display: none;
+        position: absolute;
+        background-color: aquamarine;
+        width: 150px;
+
+    }
+    .Con:hover div{
+     display: block;
+    }
+    div a{
+        color: black;
+        display: block;
+    }
+</style>
+<body>
+    <ul>
+        <li><a href="">home</a></li>
+        <li class="Con"><a href="">Contact</a>
+            <div>
+                <a href="">Apple</a>
+                <a href="">orange</a>
+                <a href="">grapes</a>
+                <a href="">banana</a>
+                <a href="">mango</a>
+            </div>
+        </li>
+        <li><a href="">about</a></li>
+        <li><a href="">about us</a></li>
+        <li><a href="">service</a></li>
+    </ul>
+</body>
+</html>

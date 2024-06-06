@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<style>
+    #lorem{
+        margin-left: 900px;
+    }
+</style>
+<body>
+
+    <!-- document object model -->
+    <!-- 1. id method -->
+    <button onclick="apple()">id method</button>
+    <div id="lorem"></div>
+    <!-- name method -->
+      <form name="signin">
+        <label for="">Name</label>
+        <input type="text" name="Rekha">
+      </form>
+      <button onclick="sky()">name method</button>
+
+
+      <!-- tag name method -->
+        <p>Lorem ipsum dolor sit.</p>
+        <p>Lorem ipsum dolor sit.</p>
+        <p>Lorem ipsum dolor sit.</p>
+        <p>Lorem ipsum dolor sit.</p>
+        <button onclick="kiwi()">Click here</button>
+        <br>
+
+        <!-- inner HTML -->
+        <button onclick="spoon()">Click here</button>
+         <div id="grapes"></div>
+         
+
+        <!-- inner text -->
+        <form name="myform">
+             <input type="password" placeholder="enter password" name="pass" onkeyup="pencil()">
+             <span id="paper"></span>
+             
+        </form>
+
+    <script>
+        // id method
+
+        function apple(){
+            document.getElementById('lorem').innerHTML= "get element by id method";
+        }
+        // name method
+        function sky(){
+            let a=document.signin.Rekha.value;
+            alert("welcome" +a);
+
+        }
+
+        // tag name method
+          function kiwi(){
+            let c=document.getElementsByTagName("p");
+            alert("total p tags are " +c.length);
+          }
+
+        //   inner HTML
+           function spoon(){
+            let d="name:<br> <input type='text'> <br> Address:<br> <textarea></textarea>"; 
+            document.getElementById("grapes").innerHTML= d;
+           }
+
+            // inner text
+             function pencil(){
+                let f;
+                if (document.myform.pass.value.length>5){
+                    f= "good";
+                }
+                else{
+                    f= "poor";
+                }
+                document.getElementById("paper").innerText= f;
+             }
+
+    </script>
+
+
+
+
+</body>
+</html>

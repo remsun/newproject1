@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date and time</title>
+</head>
+<body>
+    <script>
+         let a =new Date();
+         document.write ("today is "+a +"<br>");
+
+         let date =a.getDate();
+         let month =a.getMonth()+1;
+         let year =a.getFullYear();
+         document.write("date-"+date +"/" +month +"/" +year);
+         document.write("<br>")
+
+         let h =a.getHours();
+         let m =a.getMinutes();
+         let s =a.getSeconds();
+         document.write("time-" +h +":" +m +":" +s);
+    </script>
+   
+</body>
+</html>

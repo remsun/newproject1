@@ -1,0 +1,50 @@
+create database logic
+create table enquiry(enqid int primary key,Name varchar(30),DOB date,Sex char(1),Place varchar(30),Phoneno varchar(10),enqdate date);
+show tables;
+desc enquiry;
+
+create table student(studid int primary key,enqid int references enquiry(enqid),Regid date,Regfees int);
+desc student;
+alter table student add foreign key(enqid) references  enquiry(enqid);
+
+insert into enquiry values(1,'Shibu','1989-01-09','M','Poojappura','04712355459','2010-10-10');
+insert into enquiry values(2,'vijesh','1987-10-27','M','Trivandum','047124564568','2010-10-10');
+insert into enquiry values(3,'arathy','1988-12-12','f','Trivandum','047123652425','2010-10-10');
+insert into enquiry values(4,'neethu','1989-03-05','f','Trivandum','047124565124','2010-10-10');
+select *from enquiry;
+
+insert into student values(100,1,'2010-10-10',300);
+insert into student values(101,2,'2010-10-10',300);
+insert into student values(102,3,'2010-10-10',300);
+insert into student values(103,4,'2010-10-10',300);
+select *from student;
+
+
+update enquiry set name='vijesh',phoneno='9952383828'where enqid=2;
+select *from enquiry;
+
+create table courses(courseid int primary key, coursename varchar,coursecategoryid varchar(20),days int,hours int)
+
+alter table courses drop categoryid
+alter table courses add coursecategoryid int
+desc courses
+
+
+create table coursecategory(coursecategoryid int primary key ,coursecategoryname varchar(30));
+alter table courses add foreign key(coursecategoryid) references coursecategory(coursecategoryid); 
+
+create table studentcourses(studid int,courseid int)
+alter table studentcourses add primary key(studid,courseid)
+ desc studentcourses
+ desc student
+ 
+ alter table studentcourses add foreign key(studid) references student(studid)
+ alter table studentcourses add foreign key(courseid) references courses(courseid)
+  desc studentcourses
+  
+create table  employees(empid int primary key,employeename varchar(30),DOB date,DOJ date,place varchar(30),phoneno varchar(10),desigid int);
+create table designation(desigid int primary key,designame varchar(30),salary int);
+desc employees
+desc designation
+alter table employees add foreign key(desigid) references designation(desigid);
+desc employees

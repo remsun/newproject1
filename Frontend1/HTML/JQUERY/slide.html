@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<style>
+    .sky{
+        height: 200px;
+        background-color: black;
+
+    }
+</style>
+<body>
+    <button id="slideup">slideup</button>
+    <button id="slidedown">slidedown</button>
+    <button id="slidetoggle">slidetoggle</button>
+    <button id="stop">stop</button>
+    <div class="sky"></div>
+
+    <script>
+        $(document).ready(function(){
+            $("#slideup").click(function(){
+                $(".sky").slideUp(4000);
+            });
+            $("#slidedown").click(function(){
+                $(".sky").slideDown(3000);
+            });
+            $("#slidetoggle").click(function(){
+                $(".sky").slideToggle(2000);
+            });
+            $("#stop").click(function(){
+                $(".sky").stop(4000);
+            });
+        });
+    </script>
+
+
+</body>
+</html>

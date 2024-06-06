@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variable</title>
+</head>
+<body>
+     <script>
+      home=3;
+      var leaf= 4;
+      let fruit = 6;
+      const bal= 5;
+      document.write(home +"<br>");
+      alert(leaf);
+      document.write("<br>")
+      document.write(fruit);
+      document.write("<br>")
+      alert(bal)
+      </script>
+
+  <script>
+    // local variable
+    function local()
+    {
+        let apple =8;
+        document.write(apple);
+        
+
+    }
+    local()
+    document.write("<br>")
+  </script>
+
+  <script>
+    //   global variable
+     let demo =7;
+     function global()
+     {
+        document.write(demo);
+    
+        
+     }
+     global();
+     document.write("<br>")
+     function grapes()
+     {
+        document.write(demo);
+     }
+     grapes()
+  </script>
+    
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hide and show and toggle</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <button id="sky1">hide</button>
+    <button id="sky2">show</button>
+    <button id="sky3">toggle</button>
+    <p class="sky4">Lorem ipsum dolor sit amet.</p>
+    <script>
+        $(document).ready(function(){
+            $("#sky1").click(function(){
+                $(".sky4").hide();
+            });
+            $("#sky2").click(function(){
+                $(".sky4").show();
+            });
+            $("#sky3").click(function(){
+                $(".sky4").toggle();
+            });
+        });
+
+
+    </script>
+</body>
+</html>

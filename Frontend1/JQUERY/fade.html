@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<style>
+    .sky, .floor, .pen{
+        height: 200px;
+        width: 200px;
+        background-color: black;
+        border: 2px solid white;
+    }
+</style>
+<body>
+    <button id="fadein">fade in</button>
+    <button id="fadeout">fade out</button>
+    <button id="fadetog">fade toggle</button>
+    <div class="sky"></div>
+    <div class="floor"></div>
+    <div class="pen"></div>
+
+    <script>
+        $(document).ready(function(){
+            $("#fadein").click(function(){
+                $(".sky").fadeIn(4000);
+                $(".floor").fadeIn(4000);
+                $(".pen").fadeIn(4000);
+            });
+            
+        });
+
+        $(document).ready(function(){
+            $("#fadeout").click(function(){
+                $(".sky").fadeOut(4000);
+                $(".floor").fadeOut(4000);
+                $(".pen").fadeOut(4000);
+            });
+        });
+
+            $(document).ready(function(){
+                $("#fadetog").click(function(){
+                    $(".sky").fadeToggle(4000);
+                    $(".floor").fadeToggle(4000);
+                    $(".pen").fadeToggle(4000);
+                });
+            });
+    </script>
+
+</body>
+</html>
